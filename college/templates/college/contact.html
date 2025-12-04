@@ -1,0 +1,187 @@
+{% extends 'college/base.html' %}
+{% load static %}
+
+{% block title %}Contact Us - Vaagdevi Engineering College{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="hero" style="min-height: 60vh;">
+    <div class="hero-content">
+        <h1 class="hero-title">Contact Us</h1>
+        <p class="hero-subtitle">We'd Love to Hear From You</p>
+        <p class="hero-description">
+            Have questions? Get in touch with us and we'll respond as soon as possible.
+        </p>
+    </div>
+</section>
+
+<!-- Contact Information -->
+<section class="section" style="background: white;">
+    <div class="container">
+        <div class="cards-grid">
+            <div class="card text-center">
+                <div class="card-icon" style="margin: 0 auto 1.5rem;">📍</div>
+                <h3 class="card-title">Visit Us</h3>
+                <p class="card-description">
+                    Vaagdevi Engineering College<br>
+                    Bollikunta, Warangal<br>
+                    Telangana - 506005<br>
+                    India
+                </p>
+            </div>
+
+            <div class="card text-center">
+                <div class="card-icon" style="margin: 0 auto 1.5rem;">📞</div>
+                <h3 class="card-title">Call Us</h3>
+                <p class="card-description">
+                    <strong>Main Office:</strong><br>
+                    +91 870 242 4242<br><br>
+                    <strong>Admissions:</strong><br>
+                    +91 870 242 4243
+                </p>
+            </div>
+
+            <div class="card text-center">
+                <div class="card-icon" style="margin: 0 auto 1.5rem;">✉️</div>
+                <h3 class="card-title">Email Us</h3>
+                <p class="card-description">
+                    <strong>General Inquiries:</strong><br>
+                    info@vaagdevi.edu.in<br><br>
+                    <strong>Admissions:</strong><br>
+                    admissions@vaagdevi.edu.in
+                </p>
+            </div>
+
+            <div class="card text-center">
+                <div class="card-icon" style="margin: 0 auto 1.5rem;">🕒</div>
+                <h3 class="card-title">Office Hours</h3>
+                <p class="card-description">
+                    <strong>Monday - Friday:</strong><br>
+                    9:00 AM - 5:00 PM<br><br>
+                    <strong>Saturday:</strong><br>
+                    9:00 AM - 1:00 PM
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Send Us a Message</h2>
+            <p class="section-subtitle">
+                Fill out the form below and we'll get back to you shortly
+            </p>
+        </div>
+
+        <form class="contact-form" method="post" action="">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name" class="form-label">Full Name *</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">Email Address *</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="your.email@example.com"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+91 1234567890">
+            </div>
+
+            <div class="form-group">
+                <label for="subject" class="form-label">Subject *</label>
+                <input type="text" id="subject" name="subject" class="form-input" placeholder="What is this regarding?"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="message" class="form-label">Message *</label>
+                <textarea id="message" name="message" class="form-textarea"
+                    placeholder="Tell us more about your inquiry..." required></textarea>
+            </div>
+
+            <button type="submit" class="form-button">
+                Send Message
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="section" style="background: white; padding: 0;">
+    <div
+        style="width: 100%; height: 450px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white;">
+        <div style="text-align: center; padding: 2rem;">
+            <h3 style="font-size: 2rem; margin-bottom: 1rem; color: white;">Find Us on the Map</h3>
+            <p style="font-size: 1.125rem; color: rgba(255, 255, 255, 0.9); max-width: 600px; margin: 0 auto;">
+                Located in the heart of Warangal, our campus is easily accessible by road and public transport.
+            </p>
+            <div style="margin-top: 2rem;">
+                <a href="https://maps.google.com" target="_blank" class="btn btn-primary">
+                    Open in Google Maps
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">
+                Quick answers to common questions
+            </p>
+        </div>
+
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div class="card" style="margin-bottom: 1.5rem;">
+                <h3 class="card-title">What are the admission requirements?</h3>
+                <p class="card-description">
+                    Candidates must have passed 10+2 with Physics, Chemistry, and Mathematics with
+                    minimum 60% marks and qualify in entrance exams like JEE Main or state-level exams.
+                </p>
+            </div>
+
+            <div class="card" style="margin-bottom: 1.5rem;">
+                <h3 class="card-title">Do you provide hostel facilities?</h3>
+                <p class="card-description">
+                    Yes, we have separate hostel facilities for boys and girls with modern amenities,
+                    mess facilities, and 24/7 security.
+                </p>
+            </div>
+
+            <div class="card" style="margin-bottom: 1.5rem;">
+                <h3 class="card-title">What is the fee structure?</h3>
+                <p class="card-description">
+                    Fee structure varies by program. Please contact our admissions office or visit
+                    during office hours for detailed information about tuition and other fees.
+                </p>
+            </div>
+
+            <div class="card" style="margin-bottom: 1.5rem;">
+                <h3 class="card-title">Are scholarships available?</h3>
+                <p class="card-description">
+                    Yes, we offer merit-based scholarships and financial aid to deserving students.
+                    Government scholarships are also available for eligible candidates.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">What is the placement record?</h3>
+                <p class="card-description">
+                    Our college maintains an excellent placement record with 95%+ students getting
+                    placed in top companies. We have a dedicated placement cell for training and recruitment.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

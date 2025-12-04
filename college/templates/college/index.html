@@ -1,0 +1,129 @@
+{% extends 'college/base.html' %}
+{% load static %}
+
+{% block title %}Home - Vaagdevi Engineering College{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1 class="hero-title">Welcome to Vaagdevi Engineering College</h1>
+        <p class="hero-subtitle">Excellence in Engineering Education</p>
+        <p class="hero-description">
+            Empowering the next generation of engineers and innovators through
+            world-class education, cutting-edge research, and industry partnerships.
+        </p>
+        <div class="hero-buttons">
+            <a href="{% url 'college:courses' %}" class="btn btn-primary">Explore Courses</a>
+            <a href="{% url 'college:contact' %}" class="btn btn-secondary">Get in Touch</a>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="section">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" data-count="5000">0</div>
+                <div class="stat-label">Students Enrolled</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-count="250">0</div>
+                <div class="stat-label">Expert Faculty</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-count="15">0</div>
+                <div class="stat-label">Engineering Programs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" data-count="95">0</div>
+                <div class="stat-label">% Placement Rate</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="section" style="background: white;">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Why Choose Vaagdevi?</h2>
+            <p class="section-subtitle">
+                Discover what makes us one of the leading engineering institutions
+            </p>
+        </div>
+
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon">🎓</div>
+                <h3 class="card-title">Quality Education</h3>
+                <p class="card-description">
+                    Industry-aligned curriculum designed to prepare students for real-world challenges
+                    with hands-on learning and practical experience.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">👨‍🏫</div>
+                <h3 class="card-title">Expert Faculty</h3>
+                <p class="card-description">
+                    Learn from experienced professors and industry professionals who bring
+                    decades of expertise and passion for teaching.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🔬</div>
+                <h3 class="card-title">Modern Labs</h3>
+                <p class="card-description">
+                    State-of-the-art laboratories equipped with the latest technology and
+                    equipment for comprehensive practical training.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">💼</div>
+                <h3 class="card-title">Placement Support</h3>
+                <p class="card-description">
+                    Dedicated placement cell with strong industry connections ensuring
+                    excellent career opportunities for our graduates.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🌐</div>
+                <h3 class="card-title">Global Exposure</h3>
+                <p class="card-description">
+                    International collaborations and exchange programs providing students
+                    with global perspectives and opportunities.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🏆</div>
+                <h3 class="card-title">Research Excellence</h3>
+                <p class="card-description">
+                    Cutting-edge research facilities and opportunities to work on innovative
+                    projects with industry and academic partners.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+    <div class="container text-center">
+        <h2 class="section-title" style="color: white; -webkit-text-fill-color: white;">Ready to Start Your Journey?
+        </h2>
+        <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.9); margin-bottom: 2rem;">
+            Join thousands of students who have transformed their careers with us
+        </p>
+        <div class="hero-buttons">
+            <a href="{% url 'college:about' %}" class="btn btn-primary">Learn More</a>
+            <a href="{% url 'college:contact' %}" class="btn btn-secondary">Apply Now</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
